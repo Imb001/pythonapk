@@ -204,7 +204,7 @@ android.ndk_api = 21
 #android.add_resources =
 
 # (list) Gradle dependencies to add
-android.gradle_dependencies = 'com.google.firebase:firebase-ads:10.2.0'
+#android.gradle_dependencies =
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
@@ -263,7 +263,7 @@ android.gradle_dependencies = 'com.google.firebase:firebase-ads:10.2.0'
 #android.wakelock = False
 
 # (list) Android application meta-data to set (key=value format)
-android.meta_data = com.google.android.gms.ads.APPLICATION_ID={ca-app-pub-3940256099942544~3347511713}
+#android.meta_data =
 
 # (list) Android library project to add (will be added in the
 # project.properties automatically.)
