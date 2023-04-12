@@ -1,0 +1,488 @@
+
+    
+
+MDScreen:
+    mode: mode
+    name: "assistant"
+    MDFloatLayout:
+        md_bg_color: .1, .1, .1, 1
+            
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {"center_y": .95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: rgba(71, 92, 119, 255)
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "mode"
+        MDFloatLayout:
+            MDFloatLayout:
+                size_hint_y: .06
+                pos_hint: {"center_y": .95}
+                MDLabel:
+                    id: mode
+                    text:"Choose Your Niche!"
+                    pos_hint: {"center_y": .5}
+                    halign: "center"
+                    font_name: "fonts/RSan.ttf"
+                    font_size: "12sp"
+                    theme_text_color: "Custom"
+                    color: rgba(255, 255, 255, 255)
+                    halign: "center"
+                    
+            Layout_:
+        
+                ScrollView:
+                    do_scroll_x: False
+                    do_scroll_y: True
+                    size_hint_y: .95
+                    pos_hint: {"center_x": .5,"center_y": .45}
+                    
+                    GridLayout:
+                        adaptive_heght: True
+                        size: (root.width, root.height)
+                        height: self.minimum_height
+                        size_hint: None, None                                                                                                                                 
+                        cols: 2
+                        spacing: 20
+                        padding: 35
+
+                        MDCard:
+                            orientation:'vertical'
+                            size_hint: 1, None
+                            height: '130dp'
+                            elevation: 3
+                            border_radius: 20
+                            radius: [10, 10, 10, 10]
+                            on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "assistchat"
+                                app.not_arabic()
+
+                            MDRelativeLayout:
+                                MDCard:
+                                    orientation:'vertical'
+                                    size_hint: .23, None
+                                    height: '25dp'
+                                    pos_hint: {"center_x":.2, "center_y": .2}
+                                    elevation: 3
+                                    padding: 1
+                                    border_radius: 20
+                                    radius: [50]
+                                    md_bg_color: .1, .1, .1, 1
+                                    MDFloatLayout:
+                                        allow_stretch: False
+                                        pos_hint: {"top": 1, "center_x": .5}
+                                        size_hint: 1, 1
+                                        canvas.before:
+                                            Color:
+                                                rgb: (1, 1, 1, 1)
+                                            RoundedRectangle:
+                                                size: self.width, self.height
+                                                pos: self.pos
+                                                radius: [50]
+                                                source: "assets/I_T_Expert.png"
+
+                                MDLabel:
+                                    text: "Science & Technology"
+                                    font_size: "13sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos: "12dp", "60dp"
+                                    size_hint_x: .8
+                                    color: rgba(135, 200, 133, 255)
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: "Meet Isaac"
+                                    font_size: "9sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos_hint: {"center_x":.75, "center_y": .2}
+                                    size_hint_x: .8
+                                    color: rgba(188, 202, 228, 255)
+
+
+                        MDCard:
+                            orientation:'vertical'
+                            size_hint: 1, None
+                            height: '130dp'
+                            elevation: 3
+                            border_radius: 20
+                            radius: [10, 10, 10, 10]
+                            on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "assistchat2"
+                            MDRelativeLayout:
+                                MDCard:
+                                    orientation:'vertical'
+                                    size_hint: .23, None
+                                    height: '25dp'
+                                    pos_hint: {"center_x":.2, "center_y": .2}
+                                    elevation: 3
+                                    padding: 1
+                                    border_radius: 20
+                                    radius: [50]
+                                    md_bg_color: .1, .1, .1, 1
+                                    MDFloatLayout:
+                                        allow_stretch: False
+                                        pos_hint: {"top": 1, "center_x": .5}
+                                        size_hint: 1, 1
+                                        canvas.before:
+                                            Color:
+                                                rgb: (1, 1, 1, 1)
+                                            RoundedRectangle:
+                                                size: self.width, self.height
+                                                pos: self.pos
+                                                radius: [50]
+                                                source: "assets/Academic_Advisor.png"
+                                        
+                                MDLabel:
+                                    text: "Health &  Fitness"
+                                    font_size: "13sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos: "12dp", "60dp"
+                                    size_hint_x: .8
+                                    color: rgba(135, 200, 133, 255)
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: "Meet Maya"
+                                    font_size: "9sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos_hint: {"center_x":.75, "center_y": .2}
+                                    size_hint_x: .8
+                                    color: rgba(188, 202, 228, 255)
+
+
+                        MDCard:
+                            orientation:'vertical'
+                            size_hint: 1, None
+                            height: '130dp'
+                            elevation: 3
+                            border_radius: 20
+                            radius: [10, 10, 10, 10]
+                            on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "assistchat3"
+                                app.not_arabic()
+                            MDRelativeLayout:
+                                MDCard:
+                                    orientation:'vertical'
+                                    size_hint: .23, None
+                                    height: '25dp'
+                                    pos_hint: {"center_x":.2, "center_y": .2}
+                                    elevation: 3
+                                    padding: 1
+                                    border_radius: 20
+                                    radius: [50]
+                                    md_bg_color: .1, .1, .1, 1
+                                    MDFloatLayout:
+                                        allow_stretch: False
+                                        pos_hint: {"top": 1, "center_x": .5}
+                                        size_hint: 1, 1
+                                        canvas.before:
+                                            Color:
+                                                rgb: (1, 1, 1, 1)
+                                            RoundedRectangle:
+                                                size: self.width, self.height
+                                                pos: self.pos
+                                                radius: [50]
+                                                source: "assets/Legal_Consultant.png"
+                                            
+                                MDLabel:
+                                    text: "Love & Emotion"
+                                    font_size: "13sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos: "12dp", "60dp"
+                                    size_hint_x: .8
+                                    color: rgba(135, 200, 133, 255)
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: "Meet Kim"
+                                    font_size: "9sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos_hint: {"center_x":.75, "center_y": .2}
+                                    size_hint_x: .8
+                                    color: rgba(188, 202, 228, 255)
+
+                        MDCard:
+                            orientation:'vertical'
+                            size_hint: 1, None
+                            height: '130dp'
+                            elevation: 3
+                            border_radius: 20
+                            radius: [10, 10, 10, 10]
+                            on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "assistchat4"
+                                app.not_arabic()
+                            MDRelativeLayout:
+                                MDCard:
+                                    orientation:'vertical'
+                                    size_hint: .23, None
+                                    height: '25dp'
+                                    pos_hint: {"center_x":.2, "center_y": .2}
+                                    elevation: 3
+                                    padding: 1
+                                    border_radius: 20
+                                    radius: [50]
+                                    md_bg_color: .1, .1, .1, 1
+                                    MDFloatLayout:
+                                        allow_stretch: False
+                                        pos_hint: {"top": 1, "center_x": .5}
+                                        size_hint: 1, 1
+                                        canvas.before:
+                                            Color:
+                                                rgb: (1, 1, 1, 1)
+                                            RoundedRectangle:
+                                                size: self.width, self.height
+                                                pos: self.pos
+                                                radius: [50]
+                                                source: "assets/Financial_Advisor.png"
+                                            
+                                MDLabel:
+                                    text: "History"
+                                    font_size: "13sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos: "12dp", "60dp"
+                                    size_hint_x: .8
+                                    color: rgba(135, 200, 133, 255)
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: "Meet Kia"
+                                    font_size: "9sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos_hint: {"center_x":.75, "center_y": .2}
+                                    size_hint_x: .8
+                                    color: rgba(188, 202, 228, 255)
+
+
+                        MDCard:
+                            orientation:'vertical'
+                            size_hint: 1, None
+                            height: '130dp'
+                            elevation: 3
+                            border_radius: 20
+                            radius: [10, 10, 10, 10]
+                            on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "assistchat5"
+                                app.not_arabic()
+                            MDRelativeLayout:
+                                MDCard:
+                                    orientation:'vertical'
+                                    size_hint: .23, None
+                                    height: '25dp'
+                                    pos_hint: {"center_x":.2, "center_y": .2}
+                                    elevation: 3
+                                    padding: 1
+                                    border_radius: 20
+                                    radius: [50]
+                                    md_bg_color: .1, .1, .1, 1
+                                    MDFloatLayout:
+                                        allow_stretch: False
+                                        pos_hint: {"top": 1, "center_x": .5}
+                                        size_hint: 1, 1
+                                        canvas.before:
+                                            Color:
+                                                rgb: (1, 1, 1, 1)
+                                            RoundedRectangle:
+                                                size: self.width, self.height
+                                                pos: self.pos
+                                                radius: [50]
+                                                source: "assets/Medical_Consultant_.png"
+                                            
+                                MDLabel:
+                                    text: "Philosophy & Politics"
+                                    font_size: "13sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos: "12dp", "60dp"
+                                    size_hint_x: .8
+                                    color: rgba(135, 200, 133, 255)
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: "Meet Alex"
+                                    font_size: "9sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos_hint: {"center_x":.75, "center_y": .2}
+                                    size_hint_x: .8
+                                    color: rgba(188, 202, 228, 255)
+
+                        MDCard:
+                            orientation:'vertical'
+                            size_hint: 1, None
+                            height: '130dp'
+                            elevation: 3
+                            border_radius: 20
+                            radius: [10, 10, 10, 10]
+                            on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "assistchat6"
+                                app.not_arabic()
+                            MDRelativeLayout:
+                                MDCard:
+                                    orientation:'vertical'
+                                    size_hint: .23, None
+                                    height: '25dp'
+                                    pos_hint: {"center_x":.2, "center_y": .2}
+                                    elevation: 3
+                                    padding: 1
+                                    border_radius: 20
+                                    radius: [50]
+                                    md_bg_color: .1, .1, .1, 1
+                                    MDFloatLayout:
+                                        allow_stretch: False
+                                        pos_hint: {"top": 1, "center_x": .5}
+                                        size_hint: 1, 1
+                                        canvas.before:
+                                            Color:
+                                                rgb: (1, 1, 1, 1)
+                                            RoundedRectangle:
+                                                size: self.width, self.height
+                                                pos: self.pos
+                                                radius: [50]
+                                                source: "assets/Property_Manager.png"
+                                            
+                                MDLabel:
+                                    text: "Business & Finance"
+                                    font_size: "13sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos: "12dp", "60dp"
+                                    size_hint_x: .8
+                                    color: rgba(135, 200, 133, 255)
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: "Meet Quinn"
+                                    font_size: "9sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos_hint: {"center_x":.75, "center_y": .2}
+                                    size_hint_x: .8
+                                    color: rgba(188, 202, 228, 255)
+
+                        MDCard:
+                            orientation:'vertical'
+                            size_hint: 1, None
+                            height: '130dp'
+                            elevation: 3
+                            border_radius: 20
+                            radius: [10, 10, 10, 10]
+                            on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "assistchat7"
+                                app.arabic_mode()
+                            MDRelativeLayout:
+                                MDCard:
+                                    orientation:'vertical'
+                                    size_hint: .23, None
+                                    height: '25dp'
+                                    pos_hint: {"center_x":.2, "center_y": .2}
+                                    elevation: 3
+                                    padding: 1
+                                    border_radius: 20
+                                    radius: [50]
+                                    md_bg_color: .1, .1, .1, 1
+                                    MDFloatLayout:
+                                        allow_stretch: False
+                                        pos_hint: {"top": 1, "center_x": .5}
+                                        size_hint: 1, 1
+                                        canvas.before:
+                                            Color:
+                                                rgb: (1, 1, 1, 1)
+                                            RoundedRectangle:
+                                                size: self.width, self.height
+                                                pos: self.pos
+                                                radius: [50]
+                                                source: "assets/Sales_Associate.png"
+                                            
+                                MDLabel:
+                                    text: "Religion  (Islam)"
+                                    font_size: "13sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos: "12dp", "60dp"
+                                    size_hint_x: .8
+                                    color: rgba(135, 200, 133, 255)
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: "Meet Ali"
+                                    font_size: "9sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos_hint: {"center_x":.75, "center_y": .2}
+                                    size_hint_x: .8
+                                    color: rgba(188, 202, 228, 255)
+
+
+                        MDCard:
+                            orientation:'vertical'
+                            size_hint: 1, None
+                            height: '130dp'
+                            elevation: 3
+                            border_radius: 20
+                            radius: [10, 10, 10, 10]
+                            on_release:
+                                root.manager.transition.direction = "left"
+                                root.manager.current = "assistchat8"
+                                app.not_arabic()
+                            MDRelativeLayout:
+                                MDCard:
+                                    orientation:'vertical'
+                                    size_hint: .23, None
+                                    height: '25dp'
+                                    pos_hint: {"center_x":.2, "center_y": .2}
+                                    elevation: 3
+                                    padding: 1
+                                    border_radius: 20
+                                    radius: [50]
+                                    md_bg_color: .1, .1, .1, 1
+                                    MDFloatLayout:
+                                        allow_stretch: False
+                                        pos_hint: {"top": 1, "center_x": .5}
+                                        size_hint: 1, 1
+                                        canvas.before:
+                                            Color:
+                                                rgb: (1, 1, 1, 1)
+                                            RoundedRectangle:
+                                                size: self.width, self.height
+                                                pos: self.pos
+                                                radius: [50]
+                                                source: "assets/Insurance_Agent.png"
+                                            
+                                MDLabel:
+                                    text: "Religion (Christian)"
+                                    font_size: "13sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos: "12dp", "60dp"
+                                    size_hint_x: .8
+                                    color: rgba(135, 200, 133, 255)
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: "Meet Mathew"
+                                    font_size: "9sp"
+                                    font_name: "fonts/RSan.ttf"
+                                    adaptive_size: True
+                                    pos_hint: {"center_x":.75, "center_y": .2}
+                                    size_hint_x: .8
+                                    color: rgba(188, 202, 228, 255)
+
+
+                        

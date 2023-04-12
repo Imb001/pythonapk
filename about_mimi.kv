@@ -1,0 +1,43 @@
+
+MDScreen:
+    # mode: mode
+    name: "about_mimi"
+    MDFloatLayout:
+        md_bg_color: .1, .1, .1, 1
+            
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {"center_y": .95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: rgba(71, 92, 119, 255)
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "mode"
+
+
+        MDFloatLayout:
+                    
+            
+            MDLabel:
+                text: "A B O U T   M i M i"
+                font_size: "13sp"
+                font_name: "fonts/RSan.ttf"
+                size_hint_x: 1
+                pos_hint: {"center_y": .92}
+                color: rgba(135, 200, 133, 255)
+                halign: "center"
+
+            
+            MDFloatLayout:
+                size_hint_x: .9
+                pos_hint: {"center_x": .5, "center_y": .47}
+                MDLabel:
+                    text: "Introducing MiMi - the ultimate mobile research assistant powered by state-of-the-art artificial intelligence technology. Our app harnesses the power of ChatGpt A.I to provide seamless support to individuals looking to delve into a variety of fields. \nWhether you're exploring the intricacies of science and technology, seeking to optimize your health and fitness, uncovering the secrets of history, philosophy, and politics, or navigating the complex world of business and finance, our app has you covered. We even offer deep insights into religion, including Islam and Christianity. \nOur advanced ChatGpt A.I technology enables us to deliver quick and efficient responses to your research queries. With access to a vast database of information, our app provides comprehensive and reliable answers that meet your needs. \nMiMi is the perfect research companion for students, professionals, and anyone who wants to expand their knowledge base. Our app is easy to use, with intuitive navigation and user-friendly features. Customize your search parameters to match your unique research needs and access a wealth of information at your fingertips. \nOur team of experts has worked tirelessly to ensure that MiMi provides the most accurate and up-to-date information on every topic we cover. We are committed to providing easy access to information and making research accessible to all. \nMiMi is a must-have research tool for anyone looking to expand their knowledge and explore new areas. Download our app today and let ChatGpt A.I take your research experience to new heights."
+                    font_size: "10sp"
+                    font_name: "fonts/RSan.ttf"
+                    pos_hint: {"center_x": .5, "top": 1}
+                    color: rgba(188, 202, 228, 255)
+                    size_hint_x: .9
+                    halign: 'center'
+            

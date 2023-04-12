@@ -1,0 +1,148 @@
+<Command2>
+    size_hint_y: None
+    pos_hint: {"right": .98}
+    height: self.texture_size[1]
+    padding: 10, 7
+    theme_text_color: "Custom"
+    text_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgb: (40/255, 40/255, 40/255, 1)
+        RoundedRectangle:
+            size: self.width, self.height
+            pos: self.pos
+            radius: [13, 13, 0, 13]
+    
+
+
+<Response2>
+    size_hint_y: None
+    pos_hint: {"x": .02}
+    height: self.texture_size[1]
+    padding: 10, 7
+    canvas.before:
+        Color:
+            rgb: (31/255, 42/255, 49/255, 1)
+        RoundedRectangle:
+            size: self.width, self.height
+            pos: self.pos
+            radius: [13, 13, 13, 0]
+    
+    
+
+MDScreen:
+    text_input: text_input
+    chat_list: chat_list
+    send: send
+    name: "assistchat7"
+    MDFloatLayout:
+        md_bg_color: .1, .1, .1, 1
+            
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {"center_y": .95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: rgba(71, 92, 119, 255)
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "assistant"
+        MDFloatLayout:
+            MDFloatLayout:
+                size_hint_y: .06
+                pos_hint: {"center_y": .95}
+                MDLabel:
+                    id: mode
+                    text: "All about Islam"
+                    pos_hint: {"center_y": .5}
+                    halign: "center"
+                    font_name: "fonts/RSan.ttf"
+                    font_size: "12sp"
+                    theme_text_color: "Custom"
+                    color: rgba(211, 211, 211, 255)
+                    halign: "center"
+
+            MDFloatLayout:
+                ProfileCard:
+                    size_hint: .9, .1
+                    pos_hint: {"center_x":.5, "center_y": .88}
+                    radius: [0, 0, 16, 16]
+                    MDFloatLayout:
+                        size_hint: .15, .8
+                        pos_hint: {"center_x": .1, "center_y": .50}
+                        canvas.before:
+                            Color:
+                                rgb: 1, 1, 1, 1
+                            RoundedRectangle:
+                                size: self.size
+                                pos: self.pos
+                                radius: [40]
+                                source: "assets/Sales_Associate.png"
+
+                    MDLabel:
+                        text: "Ali"
+                        font_size: "14sp"
+                        font_name: "fonts/RSan.ttf"
+                        pos_hint: {"center_x": .72, "center_y": .6}
+                        color: rgba(135, 200, 133, 255)
+                    MDLabel:
+                        text: "Islamic Scholar"
+                        font_size: "10sp"
+                        font_name: "fonts/RSan.ttf"
+                        pos_hint: {"center_x": .72, "center_y": .32}
+                        color: rgba(188, 202, 228, 255)
+                    MDIconButton:
+                        icon: "help-circle-outline"
+                        pos_hint: {"center_x": .93, "center_y": .5}
+                        user_font_size: "20sp"
+                        theme_text_color: "Custom"
+                        text_color: rgba(91, 91, 91, 255)
+                        on_release:
+                            root.manager.transition.direction = "left"
+                            root.manager.current = "about_ass7"
+                MDFloatLayout:
+                    size_hint_y: .1
+                    SearchBar:
+                        size_hint: .9, .75
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        md_bg_color: .2, .2, .2, 1
+                        radius: [10]
+
+                        Ar_text:
+                            id: text_input
+                            hint_text:'Search...'
+                            size_hint: .85, .9
+                            pos_hint: {"center_x": .44, "center_y": .5}
+                            height: self.minimum_height
+                            cursor_color: .8, .8, .8, 1
+                            cursor_width: "2sp"
+                            multiline: True
+                            background_color: 0, 0, 0, 0
+                            font_name: "fonts/noto.ttf"
+                            font_size: "11sp"
+                            hint_text_color: rgba(91, 91, 91, 255)
+                            foreground_color: rgba(200, 200, 200, 255)
+
+                        MDIconButton:
+                            id: send
+                            icon: "send-outline"
+                            pos_hint: {"center_x": .92, "center_y": .5}
+                            user_font_size: "dp(10)"
+                            theme_text_color: "Custom"
+                            text_color: rgba(135, 133, 193, 255)
+                            on_release: app.a_chat_7()  
+
+                ScrollView:
+                    do_scroll_x: False
+                    do_scroll_y: True
+                    size_hint_y: .72
+                    pos_hint: {"center_x": .5,"center_y": .47}
+                    BoxLayout:
+                        id: chat_list
+                        orientation:'vertical'
+                        size: (root.width, root.height)
+                        height: self.minimum_height
+                        size_hint: None, None
+                        pos_hint: {"bottom": 10}
+                        cols: 1
+                        spacing: 5

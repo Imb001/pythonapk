@@ -1,0 +1,76 @@
+
+MDScreen:
+    # mode: mode
+    name: "about_ass2"
+    MDFloatLayout:
+        md_bg_color: .1, .1, .1, 1
+            
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {"center_y": .95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: rgba(71, 92, 119, 255)
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "assistchat2"
+
+
+        MDFloatLayout:
+                    
+            MDCard:
+                orientation:'vertical'
+                size_hint: .25, None
+                height: '80dp'
+                pos_hint: {"center_x":.5, "center_y": .80}
+                elevation: 3
+                padding: 1
+                border_radius: 20
+                radius: [50]
+                md_bg_color: rgba(135, 200, 133, 255)
+                # on_release:
+                #     root.manager.transition.direction = "left"
+                #     root.manager.current = "contentchat2"
+
+                MDRelativeLayout:
+                    MDFloatLayout:
+                        allow_stretch: False
+                        pos_hint: {"top": 1, "center_x": .5}
+                        size_hint: 1, 1
+                        canvas.before:
+                            Color:
+                                rgb: (1, 1, 1, 1)
+                            RoundedRectangle:
+                                size: self.width, self.height
+                                pos: self.pos
+                                source: "assets/Academic_Advisor.png"
+                                radius: [50]
+
+
+            MDFloatLayout:
+                size_hint: .9, .2
+                pos_hint: {"center_x": .86, "center_y": .72}
+
+                MDLabel:
+                    text: "Maya"
+                    font_size: "15sp"
+                    font_name: "fonts/BSan.ttf"
+                    pos_hint: {"center_x": .55, "center_y": .45}
+                    color: rgba(135, 200, 133, 255)
+                MDLabel:
+                    text: "Health & Fitness Advisor"
+                    font_size: "12sp"
+                    font_name: "fonts/ISan.ttf"
+                    pos_hint: {"center_x": .4, "center_y": .3}
+                    color: rgba(108, 108, 108, 255)
+            MDFloatLayout:
+                size_hint_x: .9
+                pos_hint: {"center_x": .5, "center_y": .4}
+                MDLabel:
+                    text: "Meet Maya, your AI chatbot assistant for all your health and fitness needs. Maya is an expert in the field, equipped with the latest knowledge and advancements in health and fitness. With years of experience and a vast understanding of the subject matter, Maya can assist you with anything from developing a workout routine to managing your diet and nutrition.Whether you're looking to lose weight, build muscle, or improve your overall health, Maya has got you covered. With a friendly and approachable demeanor, Maya is always ready to answer your questions and guide you through the complexities of the world of health and fitness. With Maya as your personal assistant, you'll have access to a wealth of information and expertise that will help you achieve your health and fitness goals. So why wait? Start chatting with Maya today and take the first step towards a healthier, happier you"
+                    font_size: "10sp"
+                    font_name: "fonts/RSan.ttf"
+                    pos_hint: {"center_x": .5, "top": 1}
+                    color: rgba(188, 202, 228, 255)
+                    size_hint_x: .9
+            
