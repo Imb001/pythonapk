@@ -20,7 +20,7 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.graphics import Color, RoundedRectangle
 from kivy.uix.textinput import TextInput
-from kivmob import KivMob
+#from kivmob import KivMob
 
 import openai
 
@@ -143,10 +143,10 @@ class Social(MDApp):
     
         screen_manager.add_widget(Builder.load_file("about_mimi.kv"))
 
-        self.ads = KivMob('ca-app-pub-3940256099942544~3347511713')
-        self.ads.new_banner('ca-app-pub-3940256099942544/6300978111', top_pos=True)
-        self.ads.new_interstitial('ca-app-pub-3940256099942544/1033173712')
-        self.ads.request_interstitial()
+        #self.ads = KivMob('ca-app-pub-3940256099942544~3347511713')
+       # self.ads.new_banner('ca-app-pub-3940256099942544/6300978111', top_pos=True)
+       # self.ads.new_interstitial('ca-app-pub-3940256099942544/1033173712')
+        #self.ads.request_interstitial()
         
         
         return screen_manager
@@ -161,19 +161,19 @@ class Social(MDApp):
 
 
 
-    def call1(self):
-        self.ads.request_banner()
-        self.ads.show_banner()
+  #  def call1(self):
+     #   self.ads.request_banner()
+       # self.ads.show_banner()
 
-    def call2(self):
-        self.ads.hide_banner()
+   # def call2(self):
+       # self.ads.hide_banner()
 
-    def on_resume(self):
-        self.ads.request_interstitial()
+  #  def on_resume(self):
+      #  self.ads.request_interstitial()
 
-    def show2(self, *args):
-        if self.ads.is_interstitial_loaded():
-            self.ads.show_interstitial()
+  #  def show2(self, *args):
+      #  if self.ads.is_interstitial_loaded():
+          #  self.ads.show_interstitial()
 
     # def chat_mode(self):
     #     global chat_version
@@ -229,7 +229,7 @@ class Social(MDApp):
     
             screen_manager.get_screen(page).text_input.text= ''
             
-            self.show2()
+            #self.show2()
         
     def response(self, *args):
         response = ""
