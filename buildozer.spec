@@ -13,16 +13,16 @@ package.domain = org.test
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,ttf,atlas
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/*.png,font/*.ttf
+#source.include_patterns = data/*, images/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-#source.exclude_dirs = tests, bin, venv
+#source.exclude_dirs = tests, bin, venv, assets, fonts
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
@@ -44,10 +44,10 @@ requirements = python3,kivy,kivymd,requests,openai,python-bidi,arabic-reshaper
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/assets/presplash.png
+presplash.filename = %(source.dir)s/presplash.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/assets/icon.png
+icon.filename = %(source.dir)s/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
