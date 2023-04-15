@@ -16,13 +16,13 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,ttf,atlas
 
 # (list) List of inclusions using pattern matching
-#source.include_patterns = data/*, images/*.png
+source.include_patterns = fonts/*.ttf, assets/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-#source.exclude_dirs = tests, bin, venv, assets, fonts
+#source.exclude_dirs = tests, bin, venv
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
