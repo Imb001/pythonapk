@@ -16,13 +16,13 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,ttf,atlas
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = fonts/*.ttf, assets/*.png
+source.include_patterns = assets/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-#source.exclude_dirs = tests, bin, venv
+source.exclude_dirs = tests, bin, venv, fonts
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
@@ -44,10 +44,10 @@ requirements = python3,kivy,kivymd,requests,openai,python-bidi,arabic-reshaper
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/presplash.png
+presplash.filename = %(source.dir)s/assets/presplash.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/icon.png
+icon.filename = %(source.dir)s/assets/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
