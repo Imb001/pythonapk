@@ -24,8 +24,8 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.graphics import Color, RoundedRectangle
 from kivy.uix.textinput import TextInput
 #from kivmob import KivMob
-import sqlite3
-from sqlite3 import Cursor, Error
+#import sqlite3
+#from sqlite3 import Cursor, Error
 
 import openai
 
@@ -37,8 +37,8 @@ import bidi.algorithm
 
 
 #Window.size = (320, 580)
-Window.keyboard_anim_args = {'d': 12, 't': 'in_out_expo'}
-Window.softinput_mode = "below_target"
+#Window.keyboard_anim_args = {'d': 12, 't': 'in_out_expo'}
+#Window.softinput_mode = "below_target"
 
 
 
@@ -193,57 +193,57 @@ class Social(MDApp):
     #     openai.api_key = "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"
     #     chat_version2 = "gpt-3.5-turbo" 
 
-    def cookies_db(self):
-        conn = None
-        try:
-            conn = sqlite3.connect("cookies.db")
-            query1 = ('''CREATE TABLE IF NOT EXISTS cookie_1 (
-                command TEXT (900) PRIMARY KEY
-                UNIQUE,
-                response TEXT
-                );''')
-            conn.execute(query1)
-        except Error as e:
-            print(e)
-        finally:
-            if conn:
-                conn.close()
+    #def cookies_db(self):
+      #  conn = None
+      #  try:
+           # conn = sqlite3.connect("cookies.db")
+         #   query1 = ('''CREATE TABLE IF NOT EXISTS cookie_1 (
+           #     command TEXT (900) PRIMARY KEY
+            #    UNIQUE,
+            #    response TEXT
+             #   );''')
+          #  conn.execute(query1)
+        #except Error as e:
+        #    print(e)
+       # finally:
+         #   if conn:
+            #    conn.close()
 
-    def cookies_db_drop(self):
-        conn = None
-        try:
-            conn = sqlite3.connect("cookies.db")
-            query1 = ('''DROP TABLE cookie_1''')
-            conn.execute(query1)
-        except Error as e:
-            print(e)
-        finally:
-            if conn:
-                conn.close()
+  #  def cookies_db_drop(self):
+    #    conn = None
+        #try:
+          #  conn = sqlite3.connect("cookies.db")
+        #    query1 = ('''DROP TABLE cookie_1''')
+          #  conn.execute(query1)
+        #except Error as e:
+          #  print(e)
+        #finally:
+          #  if conn:
+             #   conn.close()
 
-    def create_cookies(self, a, b):
-        try:
-            connect = sqlite3.connect("cookies.db")
-            cursor = connect.cursor()      
-            query = ("INSERT OR REPLACE INTO cookie_1 (command, response) VALUES(?, ?);")
-            cursor.execute(query, [a, b])    
-            connect.commit()
-            connect.close()
-            return "success"
+   # def create_cookies(self, a, b):
+     #   try:
+          #  connect = sqlite3.connect("cookies.db")
+           # cursor = connect.cursor()      
+         #   query = ("INSERT OR REPLACE INTO cookie_1 (command, response) VALUES(?, ?);")
+          #  cursor.execute(query, [a, b])    
+          #  connect.commit()
+          #  connect.close()
+          #  return "success"
             
-        except Exception as Error:
-            print(f"create_ac_cookies {Error}")
+        #except Exception as Error:
+          #  print(f"create_ac_cookies {Error}")
 
-    def copy_t(self):
-        try:
-            connect = sqlite3.connect("cookies.db")
-            cursor = connect.cursor()
-            cursor.execute("SELECT response FROM 'cookie_1';")
-            get_all = cursor.fetchall()
+   # def copy_t(self):
+        #try:
+            #connect = sqlite3.connect("cookies.db")
+          #  cursor = connect.cursor()
+          #  cursor.execute("SELECT response FROM 'cookie_1';")
+          #  get_all = cursor.fetchall()
             # g = len(get_all)
-            print(get_all)
-            connect.commit()
-            connect.close()
+          #  print(get_all)
+          #  connect.commit()
+           # connect.close()
             # return g
 
         except Exception as Error:
@@ -334,8 +334,8 @@ class Social(MDApp):
     
         openai.api_key = "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"
         chat_version = "gpt-3.5-turbo" 
-     #   loading = "No Internet Connection."
-        loading =	"eet Issac, your go-to AI chatbot assistant for all your science and technology needs. Isaac is an expert in the field, equipped with the latest knowledge and advancements in science and technology. With years of experience and a vast understanding of the subject matter, Isaac can assist you with anything from basic scientific concepts to complex technological innovations.Whether you need help with research, data analysis, or problem-solving, Isaac has got you covered. With a friendly and approachable demeanor, Isaac is always ready to answer your questions and guide you through the complexities of the world of science and technology. So why wait? Start chatting with Isaac today and take your knowledge and skills to the next l"
+        loading = "No Internet Connection."
+        #loading =	"eet Issac, your go-to AI chatbot assistant for all your science and technology needs. Isaac is an expert in the field, equipped with the latest knowledge and advancements in science and technology. With years of experience and a vast understanding of the subject matter, Isaac can assist you with anything from basic scientific concepts to complex technological innovations.Whether you need help with research, data analysis, or problem-solving, Isaac has got you covered. With a friendly and approachable demeanor, Isaac is always ready to answer your questions and guide you through the complexities of the world of science and technology. So why wait? Start chatting with Isaac today and take your knowledge and skills to the next l"
         if len(value) != 0:
             bot = ""
             value2 = f'{assist} ({value}) "remove the introduction and reply with high degree of perplexity and bustisness"'
