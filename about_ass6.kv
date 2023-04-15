@@ -1,0 +1,76 @@
+
+MDScreen:
+    # mode: mode
+    name: "about_ass6"
+    MDFloatLayout:
+        md_bg_color: .1, .1, .1, 1
+            
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {"center_y": .95}
+            user_font_size: "20sp"
+            theme_text_color: "Custom"
+            text_color: rgba(71, 92, 119, 255)
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "assistchat6"
+
+
+        MDFloatLayout:
+                    
+            MDCard:
+                orientation:'vertical'
+                size_hint: .25, None
+                height: '90dp'
+                pos_hint: {"center_x":.5, "center_y": .81}
+                #elevation: 3
+                padding: 1
+                border_radius: 20
+                radius: [99]
+                md_bg_color: rgba(135, 200, 133, 255)
+                # on_release:
+                #     root.manager.transition.direction = "left"
+                #     root.manager.current = "contentchat2"
+
+                MDRelativeLayout:
+                    MDFloatLayout:
+                        allow_stretch: False
+                        pos_hint: {"top": 1, "center_x": .5}
+                        size_hint: 1, 1
+                        canvas.before:
+                            Color:
+                                rgb: (1, 1, 1, 1)
+                            RoundedRectangle:
+                                size: self.width, self.height
+                                pos: self.pos
+                                source: "img6.png"
+                                radius: [99]
+
+
+            MDFloatLayout:
+                size_hint: .9, .2
+                pos_hint: {"center_x": .86, "center_y": .72}
+
+                MDLabel:
+                    text: "Quinn"
+                    font_size: "15sp"
+                    font_name: "BSan.ttf"
+                    pos_hint: {"center_x": .54, "center_y": .45}
+                    color: rgba(135, 200, 133, 255)
+                MDLabel:
+                    text: "Business & Finance Manager"
+                    font_size: "12sp"
+                    font_name: "ISan.ttf"
+                    pos_hint: {"center_x": .4, "center_y": .3}
+                    color: rgba(108, 108, 108, 255)
+            MDFloatLayout:
+                size_hint_x: .9
+                pos_hint: {"center_x": .5, "center_y": .4}
+                MDLabel:
+                    text: "Meet Quinn, your AI chatbot assistant for all your business and finance needs. Quinn is an expert in the field, equipped with the latest knowledge and advancements in business and finance. With years of experience and a deep understanding of the subject matter, Quinn can assist you with anything from managing your finances to developing a successful business strategy. Whether you're an entrepreneur looking to start a new business or an investor looking to make informed decisions about your finances, Quinn has got you covered. With a sharp and analytical mind, Quinn is always ready to provide you with the latest market trends and financial news.With Quinn as your personal assistant, you'll have access to a wealth of information and expertise that will help you make sound financial decisions and take your business to the next level. So why wait? Start chatting with Quinn today and unlock the full potential of your business and financial future."
+                    font_size: "13sp"
+                    font_name: "RSan.ttf"
+                    pos_hint: {"center_x": .5, "top": 1}
+                    color: rgba(108, 108, 108, 255)
+                    size_hint_x: .9
+            
