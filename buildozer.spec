@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,kivymd,requests,openai,python-bidi,arabic-reshaper
+requirements = python3,kivy==2.1.0,kivymd==1.1.1,requests==2.28.2,openai==0.27.2,python-bidi==0.4.2,arabic-reshaper==3.0.0
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -74,7 +74,7 @@ osx.kivy_version = 1.9.1
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 1
+fullscreen = 0
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
