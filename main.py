@@ -113,8 +113,8 @@ class Ar_text(TextInput):
         self.text = bidi.algorithm.get_display(arabic_reshaper.reshape(self.str))
         # print("B")
     	
-class Social(MDApp):
-    dialog = None
+class MiMi(MDApp):
+    #dialog = None
     
     def build(self):
         global screen_manager
@@ -464,8 +464,8 @@ class Social(MDApp):
 
 
   
+MiMi().run()
 
 
-
-if __name__ == "__main__":
-    Social().run()
+#if __name__ == "__main__":
+  #  Social().run()
