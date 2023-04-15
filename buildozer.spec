@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = MiMi AI
+title = MiMi
 
 # (str) Package name
-package.name = mimiai
+package.name = mimi
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
