@@ -246,8 +246,8 @@ class Social(MDApp):
            # connect.close()
             # return g
 
-        except Exception as Error:
-            print(f"teach_num error {Error}")
+        #except Exception as Error:
+          #  print(f"teach_num error {Error}")
 
 
     def prompt_res(self, *args):
