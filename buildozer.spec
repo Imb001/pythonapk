@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.1.0,pillow==9.4.0,kivymd==1.1.1,requests==2.28.2,openai==0.27.2,aiohttp==3.8.4, aiosignal, frozenlist, async-timeout==4.0.2, attrs, multidict, yarl, idna, typing-extensions==4.4.0, charset_normalizer==2.1.1, urllib3, tqdm,python-bidi==0.4.2,arabic-reshaper==3.0.0
+requirements = python3,kivy==2.1.0,pillow==9.4.0,kivymd==1.1.1,jnius,android,https://github.com/MichaelStott/KivMob/archive/refs/heads/master.zip,requests==2.28.2,openai==0.27.2,aiohttp==3.8.4, aiosignal, frozenlist, async-timeout==4.0.2, attrs, multidict, yarl, idna, typing-extensions==4.4.0, charset_normalizer==2.1.1, urllib3, tqdm,python-bidi==0.4.2,arabic-reshaper==3.0.0
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -74,7 +74,7 @@ osx.kivy_version = 1.9.1
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 0
+fullscreen = 1
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
@@ -205,7 +205,7 @@ android.accept_sdk_license = True
 #android.add_resources =
 
 # (list) Gradle dependencies to add
-#android.gradle_dependencies = 
+android.gradle_dependencies = com.google.firebase:firebase-ads:21.4.0
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
@@ -264,7 +264,7 @@ android.enable_androidx = True
 #android.wakelock = False
 
 # (list) Android application meta-data to set (key=value format)
-#android.meta_data = 
+android.meta_data = com.google.android.gms.APPLICATION_ID=ca-app-pub-3940256099942544~3347511713
 
 # (list) Android library project to add (will be added in the
 # project.properties automatically.)
