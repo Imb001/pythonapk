@@ -31,7 +31,7 @@ from kivy.uix.textinput import TextInput
 import openai
 
 import requests
-import json
+#import json
 
 import arabic_reshaper
 import bidi.algorithm
