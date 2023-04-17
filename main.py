@@ -28,10 +28,10 @@ from kivy.uix.textinput import TextInput
 #import sqlite3
 #from sqlite3 import Cursor, Error
 
-#import openai
+import openai
 
-#import requests
-#import json
+import requests
+import json
 
 import arabic_reshaper
 import bidi.algorithm
