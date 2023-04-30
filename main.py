@@ -41,8 +41,7 @@ import bidi.algorithm
 #Window.keyboard_anim_args = {'d': 12, 't': 'in_out_expo'}
 #Window.softinput_mode = "below_target"
 
-
-
+key = bWltaT09c2stdEJFU25HTmVXcEN0UWp6VnJqVWdUM0JsYmtGSkVIZEk1WUJDeDNvNWp5eGF4SjNr
 
 class ProfileCard(MDFloatLayout):
      pass
@@ -155,10 +154,10 @@ class Xchat(MDApp):
         screen_manager.add_widget(Builder.load_file("about_mimi.kv"))
         
         f = open("textfile2.txt", "r")
-        r = f.read()
-        #r = self.dcod(f.read())
+        #r = f.read()
+        r = self.dcod(f.read())
         
-        openai.api_key = r[6:-10]
+        openai.api_key = r[6:]
         f.close()
 
         #self.ads = KivMob('ca-app-pub-3940256099942544~3347511713')
