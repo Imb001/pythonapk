@@ -154,11 +154,11 @@ class Xchat(MDApp):
     
         screen_manager.add_widget(Builder.load_file("about_mimi.kv"))
         
-        f = open("textfile.txt", "r")
-        #r = f.read()
-        r = self.dcod(f.read())
+        f = open("textfile2.txt", "r")
+        r = f.read()
+        #r = self.dcod(f.read())
         
-        openai.api_key = r[6:]
+        openai.api_key = r[6:-10]
         f.close()
 
         #self.ads = KivMob('ca-app-pub-3940256099942544~3347511713')
